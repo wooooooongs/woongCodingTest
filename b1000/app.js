@@ -8,6 +8,7 @@ input = input.split(' ');
 console.log(input);
 
 function solution() {
+  
 }
 
 solution();
