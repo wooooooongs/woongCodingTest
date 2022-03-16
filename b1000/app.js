@@ -7,8 +7,9 @@ input = input.split(' ');
 
 console.log(input);
 
-function solution() {
-  
+solution();
+
+function solution(A, B) {
+
 }
 
-solution();
