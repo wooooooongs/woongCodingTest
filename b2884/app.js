@@ -7,12 +7,20 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on('line', function(value) {
-  input.push(parseInt(value));
+  input = value.split(' ').map((n) => parseInt(n))
 })
 .on('close', function() {
-  const h = input[0];
-  const m = input[1];
-  console.log(h);
+  let h = input[0];
+  let m = input[1] - 45;
+  
+  if(m < 0){
+    h -= 1;
+    if(h < 0){
+      h += 24;
+    }
+    m += 60;
+  }
 
+  console.log(h, m);
   process.exit();
 })
