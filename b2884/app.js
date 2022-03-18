@@ -10,13 +10,9 @@ rl.on('line', function(value) {
   input.push(parseInt(value));
 })
 .on('close', function() {
-  const X = input[0];
-  const Y = input[1];
-  if(X > 0){
-    Y > 0 ? console.log('1') : console.log('4');;
-  }
-  if(X < 0){
-    Y > 0 ? console.log('2') : console.log('3');;
-  }
+  const h = input[0];
+  const m = input[1];
+  console.log(h);
+
   process.exit();
 })

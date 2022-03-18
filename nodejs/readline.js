@@ -8,6 +8,7 @@ let input = [];
 
 rl.on('line', function(value) {
   input.push(parseInt(value));
+  console.log(input);
 })
 .on('close', function() {
   const X = input[0];
