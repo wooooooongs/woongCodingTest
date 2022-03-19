@@ -1,26 +1,12 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const fs = require('fs');
+const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+let input = fs.readFileSync(filePath).toString().trim().split('\n');
 
-let input = [];
+let hour = parseInt(input[0].split(' ')[0]);
+let min = parseInt(input[0]. split(' ')[1]);
+const time = parseInt(input[1])
 
-rl.on('line', function(value) {
-  input = value.split(' ').map((n) => parseInt(n))
-})
-.on('close', function() {
-  let h = input[0];
-  let m = input[1] - 45;
-  
-  if(m < 0){
-    h -= 1;
-    if(h < 0){
-      h += 24;
-    }
-    m += 60;
-  }
-
-  console.log(h, m);
-  process.exit();
-})
+if(min + time > 60){
+  hour += 1
+}
+console.log(hour, min, time);
