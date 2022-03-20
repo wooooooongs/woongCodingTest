@@ -6,7 +6,17 @@ let hour = parseInt(input[0].split(' ')[0]);
 let min = parseInt(input[0]. split(' ')[1]);
 const time = parseInt(input[1])
 
-if(min + time > 60){
-  hour += 1
+min += time;
+
+while(min >= 60){
+  min -= 60;
+  hour += 1;
+  if(min === 0){
+    break;
+  }
 }
-console.log(hour, min, time);
+if(hour >= 24){
+  hour -= 24;
+}
+
+console.log(hour, min);
