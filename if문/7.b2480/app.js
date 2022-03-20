@@ -5,7 +5,6 @@ let input = fs.readFileSync(filePath).toString().trim().split(' ').map(Number).s
 const [a, b, c] = [input[0], input[1], input[2]];
 
 let output;
-console.log(a,b,c);
 
 if(a === b && b === c){
   console.log(output = 10000 + a * 1000);
