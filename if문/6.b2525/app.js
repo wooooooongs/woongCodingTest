@@ -3,7 +3,7 @@ const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 let input = fs.readFileSync(filePath).toString().trim().split('\n');
 
 let hour = parseInt(input[0].split(' ')[0]);
-let min = parseInt(input[0]. split(' ')[1]);
+let min = parseInt(input[0].split(' ')[1]);
 const time = parseInt(input[1])
 
 min += time;
