@@ -3,5 +3,3 @@ const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 let input = fs.readFileSync(filePath).toString().trim();
 
 console.log(input - 543);
-
-console.log();
