@@ -1,14 +1,11 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
 
-let value = [];
-rl.on('line', function(line) {
-  value.push(line.toString().split(' '));
+let max = Number(input[0]);
+let answer = '';
 
-}).on('close', function() {
-  console.log(value);
-  process.exit();
-})
+for (let i=0; i<=max; i++){
+  let num = input[i].split(' ');
+  answer += Number(num[0]) + Number(num[1]) + '\n';
+}
+
+console.log(answer);
