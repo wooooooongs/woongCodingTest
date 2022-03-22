@@ -1,8 +1,9 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+let input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 let answer = '';
-for(i = input; i>=1; i--){
+
+for(i=input; i>=1; i--){
   answer += i + '\n';
-}
+};
 
 console.log(answer);
