@@ -1,11 +1,10 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
+let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n')
 
-let max = Number(input[0]);
+let num = input[0];
 let answer = '';
 
-for (let i=0; i<=max; i++){
-  let num = input[i].split(' ');
-  answer += Number(num[0]) + Number(num[1]) + '\n';
+for(i=1; i<=num; i++){
+  let inputNum = input[i].split(' ');
+  answer += parseInt(inputNum[0]) + parseInt(inputNum[1]) + '\n';
 }
-
 console.log(answer);
