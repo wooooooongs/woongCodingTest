@@ -11,3 +11,4 @@ function solution(A, B) {
   console.log(A+B);
 }
 
+// 테스트
