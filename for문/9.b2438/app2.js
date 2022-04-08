@@ -1,11 +1,11 @@
 let input = require('fs').readFileSync('/dev/stdin').toString().trim();
 let answer = '';
 
-for(i=0; i<=input; i++){
-	answer += '*';
-	for(j=0; j<=input; j++){
-		answer += '\n'
-	}
+for(i=1; i<=input; i++){
+	for(j=1; j<=i; j++){
+		answer += '*';
+	}	
+	answer += '\n'
 }
 
-console.log(answer);
+console.log(answer);	
