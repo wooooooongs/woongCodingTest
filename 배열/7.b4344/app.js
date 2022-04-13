@@ -3,25 +3,22 @@ let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n
 const caseNum = +input[0];
 
 for(i=1; i<=caseNum; i++){
-  let j = sum = average = count = 0;
+  let sum = count = 0;
   let testArr = input[i].split(' ').map(x=>+x);
-  let studentNum = +testArr[0];
+  let studentNum = testArr[0];
 
-  while(j<=studentNum){
-    j++
-    console.log(testArr[j]);
-    // console.log(sum);
+  for(j=1; j<=studentNum; j++){
+    sum += testArr[j];
   }
 
-  // average = sum / studentNum;
-  // j = 0;
-  // console.log(sum);
+  let average = sum / studentNum;
 
-  // while(j<=studentNum){
-  //   j++
-  //   if(average >= +testArr[j]){
-  //     count++
-  //   }
-  // }
-  // console.log(count);
+  for(k=1; k<=studentNum; k++){
+    if(average < testArr[k]){
+      count++
+    }
+    // 1차시도: k를 0으로 시작해서 실패
+  }
+  
+  console.log((count / studentNum * 100).toFixed(3) + '%');
 }
