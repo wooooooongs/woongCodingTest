@@ -21,4 +21,6 @@ for(i=1; i<=caseNum; i++){
   }
   
   console.log((count / studentNum * 100).toFixed(3) + '%');
+
+  // 나와 비슷한 풀이법으로 조그만 수정만 했더니 시간이 100ms 줄었음. 분석해보자
 }
