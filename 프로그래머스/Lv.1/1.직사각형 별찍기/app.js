@@ -1,11 +1,15 @@
-const a = 5, b =3;
-let answer = '';
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', data => {
+    const n = data.split(" ");
+    const a = Number(n[0]), b = Number(n[1]);
+    let answer = '';
 
-for(i=0; i<b; i++){
-  for(j=0; j<a; j++){
-    answer += '*';
-  }
-  answer += '\n'
-}
+    for(i=0; i<b; i++){
+      for(j=0; j<a; j++){
+        answer += '*';
+      }
+      answer += '\n'
+    }
 
-console.log(answer.trim());
+    console.log(answer.trim());
+});
