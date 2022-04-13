@@ -3,20 +3,25 @@ let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n
 const caseNum = +input[0];
 
 for(i=1; i<=caseNum; i++){
-  let sum = average = count = 0;
-  let testArr = input[i].split(' ');
+  let j = sum = average = count = 0;
+  let testArr = input[i].split(' ').map(x=>+x);
   let studentNum = +testArr[0];
 
-  for(j=1; j<=studentNum; j++){
-    sum += +testArr[j];
-    if(j === studentNum){
-      average = sum / studentNum;
-      for(k=0; k<=j; k++){
-        if(testArr(j) > average){
-        count++;
-        }
-      }
-      console.log(count);
-    }
+  while(j<=studentNum){
+    j++
+    console.log(testArr[j]);
+    // console.log(sum);
   }
+
+  // average = sum / studentNum;
+  // j = 0;
+  // console.log(sum);
+
+  // while(j<=studentNum){
+  //   j++
+  //   if(average >= +testArr[j]){
+  //     count++
+  //   }
+  // }
+  // console.log(count);
 }
