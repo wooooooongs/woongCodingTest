@@ -1,12 +1,16 @@
-function c(v){
-  let v = 0;
-  for(i=0; v===1; i++){
-    
+function c(num){
+  let value = num;
+  let count = 0;
+
+  while(value !== 1){
+    value % 2 === 0 ? value /= 2 : value = (value * 3) +1;
+    count++;
+    if(count === 500){
+      count = -1;
+      break;
+    }
   }
-  if(v % 2){
-    v / 2
-  }
-  console.log(a);
+  console.log(count);
 }
 
-c(6)
+c(16)
