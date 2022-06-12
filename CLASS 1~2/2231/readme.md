@@ -2,7 +2,7 @@
 
 1차 시도
 
-```javascript
+```js
 const input = require('fs').readFileSync('/dev/stdin');
 
 let arr = [];
