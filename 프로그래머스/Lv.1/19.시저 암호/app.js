@@ -20,7 +20,3 @@ function solution(s, n) {
 
 console.log(solution('AB', 1)); 
 console.log(solution('a B z', 4)); 
-
-
-// 테스트 4까지는 성공
-// 테스트 5 ~ 13 실패
