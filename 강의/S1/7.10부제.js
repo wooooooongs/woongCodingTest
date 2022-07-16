@@ -10,6 +10,16 @@ function solution(n, arr){
 
 let arr = [12, 20, 54, 30, 87, 91, 30];
 
+// 배열.push를 쓰지 않고
+function solution2(n, arr){
+  let answer = 0;
+  for(let x of arr){
+    if(x % 10 === 0) answer ++;
+  }
+  return answer
+}
+
 
 console.log(solution(0, arr));
+console.log(solution2(0, arr));
 // 3 출력
