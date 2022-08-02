@@ -1,10 +1,9 @@
-const num = require('fs').readFileSync('/dev/stdin')
-let count = 1;
-let range = 1;
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n')
+let n = input[0];
 
-while(count < num){
-  count += 6 * range;
-  range ++
+input.shift();
+input.sort((a, b) => a - b);
+
+for(i=0; i<n; i++){
+  console.log(input[i]);
 }
-
-console.log(range);
