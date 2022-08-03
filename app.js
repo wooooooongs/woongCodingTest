@@ -1,10 +1,10 @@
-const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ')
+const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
-let a = input[0];
-let b = input[1];
-let c = input[2];
-let d = c - b;
-let answer = Math.floor(a / d) + 1;
-
-if(d <= 0) console.log(-1);
-else console.log(answer);
+let arr = [[1], ['ABC'], ['DEF'], ['GHI'], ['JKL'], ['MNO'], ['PQRS'], ['TUV'], ['WXYZ'], [0]];
+let answer = 0
+for(i=0; i<arr.length; i++){
+  for(j=0; j<input.length; j++){
+    if(arr[i].join().includes(input[j])) answer += arr.indexOf(arr[i]) + 2;
+  }
+}
+console.log(answer);
