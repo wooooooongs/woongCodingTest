@@ -1,9 +1,10 @@
-const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n')
-let n = input[0];
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ')
 
-input.shift();
-input.sort((a, b) => a - b);
+let a = input[0];
+let b = input[1];
+let c = input[2];
+let d = c - b;
+let answer = Math.floor(a / d) + 1;
 
-for(i=0; i<n; i++){
-  console.log(input[i]);
-}
+if(d <= 0) console.log(-1);
+else console.log(answer);
