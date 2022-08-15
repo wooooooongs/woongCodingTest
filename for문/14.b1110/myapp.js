@@ -26,4 +26,7 @@ function a(n) {
   else return a(sum2)
 }
 
+// 다른 방법을 생각해내야함..
+// 문자열로 바꿔서 하는 방법은 비효율적임.
+// Math.floor(숫자 % 10), 숫자 / 10을 이용하는 방법이 있다.
 console.log(a(1));
