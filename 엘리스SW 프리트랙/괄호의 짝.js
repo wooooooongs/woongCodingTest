@@ -22,35 +22,24 @@ function solution(string) {
 
   for (i = 0; i < filteredArr.length; i++) {
     if (filteredArr[i] === undefined) continue;
-    label: for (j = i; j < filteredArr.length; j++) {
+    for (j = i; j < filteredArr.length; j++) {
       if (filteredArr[j] === undefined) continue;
 
-      function filtering(b, b2) {
-        if (filteredArr[i] === b && filteredArr[j] === b2) {
-          filteredArr[i] = undefined;
-          filteredArr[j] = undefined;
-          break label;
-          // 점프 대상은 함수 경계를 벗어날 수 없다.
-        }
+      if (filteredArr[i] === '(' && filteredArr[j] === ')') {
+        filteredArr[i] = undefined;
+        filteredArr[j] = undefined;
+        break;
       }
-      filtering('(', ')')
-      filtering('{', '}')
-      filtering('[', ']')
-      // if (filteredArr[i] === '(' && filteredArr[j] === ')') {
-      //   filteredArr[i] = undefined;
-      //   filteredArr[j] = undefined;
-      //   break;
-      // }
-      // if (filteredArr[i] === '{' && filteredArr[j] === '}') {
-      //   filteredArr[i] = undefined;
-      //   filteredArr[j] = undefined;
-      //   break;
-      // }
-      // if (filteredArr[i] === '[' && filteredArr[j] === ']') {
-      //   filteredArr[i] = undefined;
-      //   filteredArr[j] = undefined;
-      //   break;
-      // }
+      if (filteredArr[i] === '{' && filteredArr[j] === '}') {
+        filteredArr[i] = undefined;
+        filteredArr[j] = undefined;
+        break;
+      }
+      if (filteredArr[i] === '[' && filteredArr[j] === ']') {
+        filteredArr[i] = undefined;
+        filteredArr[j] = undefined;
+        break;
+      }
     }
   }
 
