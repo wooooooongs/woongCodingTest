@@ -60,3 +60,13 @@ function solution2(n, arr1, arr2) {
 
   return newArr.map((r) => r.join(''));
 }
+
+function solution3(n, arr1, arr2) {
+  let answer = [];
+
+  for (i = 0; i < n; i++) {
+    answer.push((arr1[i] | arr2[i]).toString(2).padStart(n, 0).replaceAll('1', '#').replaceAll('0', ' '));
+  }
+
+  return answer;
+}
