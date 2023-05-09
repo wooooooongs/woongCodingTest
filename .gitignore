@@ -1,2 +1,4 @@
 .DS_Store
-for문/.DS_Store
+# local test를 위한 파일들
+input.txt
+app.js
