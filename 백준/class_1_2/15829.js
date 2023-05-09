@@ -1,3 +1,5 @@
+// Hasing(B2-15829)
+
 const input = require('fs').readFileSync('./input.txt').toString().split('\n');
 
 const code = input[1].split('').map((s) => s.charCodeAt() % 96);

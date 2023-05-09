@@ -1,3 +1,5 @@
+// 이항 계수 1(B1-11050)
+
 const [N, K] = require('fs').readFileSync('./input.txt').toString().split(' ');
 
 let n1 = 1;
