@@ -1,10 +1,6 @@
-# 제목
+# 소수 찾기(B2-1978)
 
-**소수 찾기**
-
-### 문제 주소
-
-https://www.acmicpc.net/problem/1978
+[문제 주소](https://www.acmicpc.net/problem/1978)
 
 ## 설명 및 회고
 
@@ -13,5 +9,3 @@ https://www.acmicpc.net/problem/1978
 - filter 함수를 내가 생각한 대로 쓸 수 있는 단계에 와서 기쁘다.
 - `input.filter((n) => n % i !== 0);` 처음엔 이런 코드였는데, 2, 3, 4, 5...의 배수는 제거를 성공했는데, 정작 2, 3, 4, 5가 없어져서
 - `input.filter((n) => (n === i ? 1 : n % i !== 0));` 이렇게 바꾸어주었다.
-
-## 새로운 것

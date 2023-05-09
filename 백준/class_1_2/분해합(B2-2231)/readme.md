@@ -1,20 +1,25 @@
-## 백준-2231 분해합 node.js
+# 분해합(B2-2231)
 
-1차 시도
+[문제 주소](https://www.acmicpc.net/problem/2231)
+
+## 1차 시도
 
 ```js
 const input = require('fs').readFileSync('/dev/stdin');
 
 let arr = [];
 
-for(i=1; i<input; i++){
-  let n1 = i.toString().split('').map((n)=>+n)
+for (i = 1; i < input; i++) {
+  let n1 = i
+    .toString()
+    .split('')
+    .map((n) => +n);
   let calc = 0;
-  
-  for(j=0; j<n1.length; j++){
-    calc += n1[j]
+
+  for (j = 0; j < n1.length; j++) {
+    calc += n1[j];
   }
-  calc += i
+  calc += i;
   calc == input ? arr.push(i) : false;
 }
 
@@ -26,9 +31,9 @@ console.log(input == 0 ? 0 : arr[0]);
 999,999까지는 구해지는데, 1,000,000이 `undefined`가 출력되는 것을 확인했다. ~~
 
 뿐만 아니라 1 3 5 7 9... 등이 undefined가 뜨는 것을 확인했다....
-난 바보다
 
+-
 
+### 2023-05-09 다시 확인
 
-
-
+시간이 지나고 보니 예외 처리에 대한 개념을 잡기 시작한 계기가 된 거 같다.

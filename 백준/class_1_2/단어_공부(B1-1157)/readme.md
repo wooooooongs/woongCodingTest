@@ -1,10 +1,34 @@
-# 단어 공부(B1-1157)
+# 분해합(B2-2231)
 
-[문제 주소](https://www.acmicpc.net/problem/1157)
+[문제 주소](https://www.acmicpc.net/problem/2231)
 
-## 코드풀이
+## 1차 시도
 
-**꼭 다시 풀어보자**
+```js
+const input = require('fs').readFileSync('/dev/stdin');
 
-`new Set()`을 통해 중복을 제거해주고 유사객체배열을 배열로 바꿔주기 위해  
-`Array.from()`을 사용하였다.
+let arr = [];
+
+for (i = 1; i < input; i++) {
+  let n1 = i
+    .toString()
+    .split('')
+    .map((n) => +n);
+  let calc = 0;
+
+  for (j = 0; j < n1.length; j++) {
+    calc += n1[j];
+  }
+  calc += i;
+  calc == input ? arr.push(i) : false;
+}
+
+console.log(input == 0 ? 0 : arr[0]);
+```
+
+~~ 틀렸습니다가 떠써 당황했다.  
+입력 범위를 잘 확인하지 않았기 때문이었다.  
+999,999까지는 구해지는데, 1,000,000이 `undefined`가 출력되는 것을 확인했다. ~~
+
+뿐만 아니라 1 3 5 7 9... 등이 undefined가 뜨는 것을 확인했다....
+난 바보다
